@@ -1,0 +1,7 @@
+package ch03.ex05;
+
+import javafx.scene.paint.Color;
+
+interface ColorTransformer {
+	Color apply(int x, int y, Color color);
+}
