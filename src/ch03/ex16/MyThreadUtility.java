@@ -10,7 +10,7 @@ import javax.management.RuntimeErrorException;
 public class MyThreadUtility {
 
 //	Q. 3つ目のパラメータ（Throwable）は必要か？
-//	A. 必要ない。secondの第２引数で処理可能。
+//	A. 必要。secondのエラーを処理するために必要。
 
 	public static <T> void doInOrderAsync(
 			Supplier<T> first, BiConsumer<T, Throwable> second, Consumer<Throwable> handler){
