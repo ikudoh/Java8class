@@ -52,7 +52,7 @@ public class FrightSchedle extends Application {
 
 			@Override
 			public void handle(ActionEvent event) {
-				// 現地出発地時刻
+				// 現地出発時刻
 				int departHour = 0;
 				int departMinute = 0;
 				String departAreaStr =  departAreaBox.getSelectionModel().getSelectedItem();
@@ -61,7 +61,7 @@ public class FrightSchedle extends Application {
 				int frightHour= 0;
 				int frightMinute = 0;
 				try {
-					// 現地出発地時刻
+					// 現地出発時刻
 					departHour = Integer.parseInt(departureHourField.getText());
 					departMinute = Integer.parseInt(departureMinuteField.getText());
 					departAreaTime = departAreaTime.withHour(departHour);
