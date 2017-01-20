@@ -67,8 +67,8 @@ public class FrightSchedle extends Application {
 					// 現地到着時刻
 					arrivalHour = Integer.parseInt(arrivalHourField.getText());
 					arrivalMinute = Integer.parseInt(arrivalMinuteField.getText());
-					arrivalAreaTime = departAreaTime.withHour(arrivalHour);
-					arrivalAreaTime = departAreaTime.withMinute(arrivalMinute);
+					arrivalAreaTime = arrivalAreaTime.withHour(arrivalHour);
+					arrivalAreaTime = arrivalAreaTime.withMinute(arrivalMinute);
 					arrivalAreaTime2 = arrivalAreaTime.withZoneSameInstant(ZoneId.of(departAreaStr));
 				} catch(NumberFormatException | DateTimeException ex) {
 					Alert alert = new Alert(AlertType.ERROR);
