@@ -77,9 +77,7 @@ public class FrightSchedle extends Application {
 					alert.getDialogPane().setContentText( "時刻には半角数値0-23(h), 0-59(m)を指定してください。" );
 					alert.show();
 					return;
-				}
-
-				// TODO 35h固定になってる、、、
+				}、
 				long frightSeconds = Duration.between(departAreaTime, arrivalAreaTime2).getSeconds();
 				frightTimeLabel.setText("飛行時間：" + frightSeconds/60 + " h " + frightSeconds%60 + "m ");
 			}
@@ -100,7 +98,6 @@ public class FrightSchedle extends Application {
 
 	}
 
-	// すみません、不具合あります。(結果が35h固定…)
 	public static void main(String[] args) {
 		launch(args);
 	}
