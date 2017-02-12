@@ -1,0 +1,6 @@
+Aiea,HI,96701
+EwaBeach,HI,96706,timezoneHonoluluHI-AleutianStandardTime
+Hanalei,HI,96714-0000
+HI,
+Hanalei,
+testtesttest
