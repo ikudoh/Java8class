@@ -12,12 +12,12 @@ public class Address {
 	public static void printAddress(Path path) {
 		Pattern pattern = Pattern.compile(
 				// P203を変更 memo : 正規表現チェックに便利なサイト → http://rubular.com/
-				"(?<city>[A-Z,a-z]+),(?<state>[A-Z]{2}),(?<zipCode>[0-9]{5}(-[0-9]{4})?)"
+				"(?<city>[A-Z a-z]+),(?<state>[A-Z]{2}),(?<zipCode>[0-9]{5}(-[0-9]{4})?).*"
 				);
 		try {
 			for (String line : Files.readAllLines(path)) {
 				Matcher matcher = pattern.matcher(line);
-				if (matcher.matches()) {
+				if (matcher.matches()) {	// find()にしたら正規表現の後ろ.*がなくてもOK
 					System.out.print("city : "         + matcher.group("city"));
 					System.out.print(", site : "      + matcher.group("state"));
 					System.out.println(", zipCode : " + matcher.group("zipCode"));
